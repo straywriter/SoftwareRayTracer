@@ -19,7 +19,7 @@
 
 #include <iostream>
 
-color ray_color(const ray &r, const hittable &world, int depth)
+color ray_color(const Ray &r, const hittable &world, int depth)
 {
     hit_record rec;
 
@@ -29,14 +29,14 @@ color ray_color(const ray &r, const hittable &world, int depth)
 
     if (world.hit(r, 0.001, infinity, rec))
     {
-        ray scattered;
+        Ray scattered;
         color attenuation;
         if (rec.mat_ptr->scatter(r, rec, attenuation, scattered))
             return attenuation * ray_color(scattered, world, depth - 1);
         return color(0, 0, 0);
     }
 
-    vec3 unit_direction = unit_vector(r.direction());
+    Vector3d unit_direction = unit_vector(r.direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
@@ -52,14 +52,14 @@ hittable_list random_scene() {
             auto choose_mat = random_double();
             point3 center(a + 0.9*random_double(), 0.2, b + 0.9*random_double());
 
-            if ((center - vec3(4, 0.2, 0)).length() > 0.9) {
+            if ((center - Vector3d(4, 0.2, 0)).length() > 0.9) {
                 shared_ptr<material> sphere_material;
 
                 if (choose_mat < 0.8) {
                     // diffuse
                     auto albedo = color::random() * color::random();
                     sphere_material = make_shared<lambertian>(albedo);
-                    auto center2 = center + vec3(0, random_double(0,.5), 0);
+                    auto center2 = center + Vector3d(0, random_double(0,.5), 0);
                     world.add(make_shared<moving_sphere>(
                         center, center2, 0.0, 1.0, 0.2, sphere_material));
                 } else if (choose_mat < 0.95) {
@@ -109,7 +109,7 @@ int main()
  
  point3 lookfrom(13,2,3);
     point3 lookat(0,0,0);
-    vec3 vup(0,1,0);
+    Vector3d vup(0,1,0);
     auto dist_to_focus = 10.0;
     auto aperture = 0.1;
     int image_height = static_cast<int>(image_width / aspect_ratio);
@@ -130,7 +130,7 @@ int main()
             {
                 auto u = (i + random_double()) / (image_width - 1);
                 auto v = (j + random_double()) / (image_height - 1);
-                ray r = cam.get_ray(u, v);
+                Ray r = cam.get_ray(u, v);
                 pixel_color += ray_color(r, world, max_depth);
             }
             write_color(std::cout, pixel_color, samples_per_pixel);

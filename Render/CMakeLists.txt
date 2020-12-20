@@ -1,6 +1,6 @@
 # Render
 
-file(GLOB RenderInclude ./Include/*.h)
+file(GLOB_RECURSE RenderInclude ./Include/*.h)
 
 file(GLOB_RECURSE   RenderSrc ./Src/*.cpp)
 

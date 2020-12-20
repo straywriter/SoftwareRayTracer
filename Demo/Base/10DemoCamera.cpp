@@ -16,7 +16,7 @@
 
 #include "Material.h"
 
-color ray_color(const ray &r, const hittable &world, int depth)
+color ray_color(const Ray &r, const hittable &world, int depth)
 {
     hit_record rec;
 
@@ -26,14 +26,14 @@ color ray_color(const ray &r, const hittable &world, int depth)
 
     if (world.hit(r, 0.001, infinity, rec))
     {
-        ray scattered;
+        Ray scattered;
         color attenuation;
         if (rec.mat_ptr->scatter(r, rec, attenuation, scattered))
             return attenuation * ray_color(scattered, world, depth - 1);
         return color(0, 0, 0);
     }
 
-    vec3 unit_direction = unit_vector(r.direction());
+    Vector3d unit_direction = unit_vector(r.direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
@@ -66,7 +66,7 @@ int main()
     // Camera
 
     // camera cam;
-    camera cam(point3(-2, 2, 1), point3(0, 0, -1), vec3(0, 1, 0), 90, aspect_ratio);
+    camera cam(point3(-2, 2, 1), point3(0, 0, -1), Vector3d(0, 1, 0), 90, aspect_ratio);
 
     // Render
 
@@ -82,7 +82,7 @@ int main()
             {
                 auto u = (i + random_double()) / (image_width - 1);
                 auto v = (j + random_double()) / (image_height - 1);
-                ray r = cam.get_ray(u, v);
+                Ray r = cam.get_ray(u, v);
                 pixel_color += ray_color(r, world, max_depth);
             }
             write_color(std::cout, pixel_color, samples_per_pixel);

@@ -19,7 +19,7 @@ struct hit_record;
 class material
 {
   public:
-    virtual bool scatter(const ray &r_in, const hit_record &rec, color &attenuation, ray &scattered) const = 0;
+    virtual bool scatter(const Ray &r_in, const hit_record &rec, color &attenuation, Ray &scattered) const = 0;
 
 
   virtual color emitted(double u, double v, const point3& p) const {
@@ -36,7 +36,7 @@ class material
     //     return false;
     // }
 
-    virtual double scattering_pdf(const ray &r_in, const hit_record &rec, const ray &scattered) const
+    virtual double scattering_pdf(const Ray &r_in, const hit_record &rec, const Ray &scattered) const
     {
         return 0;
     }

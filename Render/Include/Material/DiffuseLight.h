@@ -12,7 +12,7 @@ class diffuse_light : public material
     {
     }
 
-    virtual bool scatter(const ray &r_in, const hit_record &rec, color &attenuation, ray &scattered) const override
+    virtual bool scatter(const Ray &r_in, const hit_record &rec, color &attenuation, Ray &scattered) const override
     {
         return false;
     }

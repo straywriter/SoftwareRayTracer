@@ -1,21 +1,21 @@
 #pragma once
 #include "Vector3d.h"
 
-class ray
+class Ray
 {
      public:
     point3 orig;
-    vec3 dir;
+    Vector3d dir;
     double tm;
   public:
-    ray()
+    Ray()
     {
     }
-    ray(const point3 &origin, const vec3 &direction) : orig(origin), dir(direction), tm(0)
+    Ray(const point3 &origin, const Vector3d &direction) : orig(origin), dir(direction), tm(0)
     {
     }
 
-    ray(const point3 &origin, const vec3 &direction, double time) : orig(origin), dir(direction), tm(time)
+    Ray(const point3 &origin, const Vector3d &direction, double time) : orig(origin), dir(direction), tm(time)
     {
     }
 
@@ -23,7 +23,7 @@ class ray
     {
         return orig;
     }
-    vec3 direction() const
+    Vector3d direction() const
     {
         return dir;
     }

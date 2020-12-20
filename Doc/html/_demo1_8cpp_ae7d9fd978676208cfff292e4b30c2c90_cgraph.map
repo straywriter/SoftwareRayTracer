@@ -1,9 +1,0 @@
-<map id="ray_color" name="ray_color">
-<area shape="rect" id="node1" title=" " alt="" coords="5,96,136,132"/>
-<area shape="rect" id="node2" href="$classray.html#a28fa3264fc44eef1c968797f49aa8d7e" title=" " alt="" coords="184,5,375,41"/>
-<area shape="rect" id="node3" href="$classhittable.html#a0a6ee133e5e89542e94951b397e1266e" title=" " alt="" coords="190,65,369,101"/>
-<area shape="rect" id="node4" href="$_vector3d_8h.html#a88dc506816c3fef82ebac91ca859273a" title=" " alt="" coords="202,125,357,161"/>
-<area shape="rect" id="node7" href="$classvec3.html#a83d2fd06769d2993a94720f5fed1135b" title=" " alt="" coords="226,185,333,221"/>
-<area shape="rect" id="node5" href="$classvec3.html#a5d54726a6e5ea2a66ba687fe5d4b1c9a" title=" " alt="" coords="423,125,589,161"/>
-<area shape="rect" id="node6" href="$classvec3.html#a1be4d540a0eef0cc388b6b0a23021ca4" title=" " alt="" coords="637,125,900,161"/>
-</map>

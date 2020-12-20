@@ -1,8 +1,0 @@
-<map id="camera::camera" name="camera::camera">
-<area shape="rect" id="node1" title=" " alt="" coords="5,65,196,101"/>
-<area shape="rect" id="node2" href="$_vector3d_8h.html#a6f15d49fc74319def3ebad39cb40f4c2" title=" " alt="" coords="322,5,405,41"/>
-<area shape="rect" id="node3" href="$_render_8h.html#a457297701063cbffc976655fcac3d5b1" title=" " alt="" coords="244,65,483,101"/>
-<area shape="rect" id="node4" href="$_vector3d_8h.html#a88dc506816c3fef82ebac91ca859273a" title=" " alt="" coords="286,125,441,161"/>
-<area shape="rect" id="node5" href="$classvec3.html#a5d54726a6e5ea2a66ba687fe5d4b1c9a" title=" " alt="" coords="531,125,697,161"/>
-<area shape="rect" id="node6" href="$classvec3.html#a1be4d540a0eef0cc388b6b0a23021ca4" title=" " alt="" coords="745,125,1008,161"/>
-</map>

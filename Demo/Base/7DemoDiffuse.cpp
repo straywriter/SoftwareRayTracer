@@ -22,7 +22,7 @@
 //         return -in_unit_sphere;
 // }
 
-color ray_color(const ray &r, const hittable &world, int depth)
+color ray_color(const Ray &r, const hittable &world, int depth)
 {
     hit_record rec;
 
@@ -33,10 +33,10 @@ color ray_color(const ray &r, const hittable &world, int depth)
     if (world.hit(r, 0.001, infinity, rec))
     {
         point3 target = rec.p + random_in_hemisphere(rec.normal);
-        return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
+        return 0.5 * ray_color(Ray(rec.p, target - rec.p), world, depth - 1);
     }
 
-    vec3 unit_direction = unit_vector(r.direction());
+    Vector3d unit_direction = unit_vector(r.direction());
     auto t = 0.5 * (unit_direction.y() + 1.0);
     return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
@@ -61,7 +61,7 @@ int main()
     // camera cam;
     point3 lookfrom(13, 2, 3);
     point3 lookat(0, 0, 0);
-    vec3 vup(0, 1, 0);
+    Vector3d vup(0, 1, 0);
     auto dist_to_focus = 10.0;
     auto aperture = 0.1;
 
@@ -81,7 +81,7 @@ int main()
             {
                 auto u = (i + random_double()) / (image_width - 1);
                 auto v = (j + random_double()) / (image_height - 1);
-                ray r = cam.get_ray(u, v);
+                Ray r = cam.get_ray(u, v);
                 pixel_color += ray_color(r, world, max_depth);
             }
             write_color(std::cout, pixel_color, samples_per_pixel);

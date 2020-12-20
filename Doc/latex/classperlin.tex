@@ -1,0 +1,273 @@
+\hypertarget{classperlin}{}\doxysection{perlin Class Reference}
+\label{classperlin}\index{perlin@{perlin}}
+
+
+{\ttfamily \#include $<$Perlin.\+h$>$}
+
+
+
+Collaboration diagram for perlin\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classperlin__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classperlin_a3cd4f25507bf2af91f36be5b5647b123}{perlin}} ()
+\item 
+\mbox{\hyperlink{classperlin_ad06e3d14a3d5e49a30bd015952c4c875}{$\sim$perlin}} ()
+\item 
+double \mbox{\hyperlink{classperlin_af9aedcbddac358255985cd0c57a32223}{noise}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&p) const
+\item 
+double \mbox{\hyperlink{classperlin_ac8989f10f7f91777ad66143fc3f584d2}{turb}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&p, int depth=7) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int $\ast$ \mbox{\hyperlink{classperlin_a087f2c5a40b441a5586844250f6a3492}{perlin\+\_\+generate\+\_\+perm}} ()
+\item 
+static void \mbox{\hyperlink{classperlin_a1b5c348ac82cdfe0b83526b45fb2d535}{permute}} (int $\ast$p, int n)
+\item 
+static double \mbox{\hyperlink{classperlin_a0582d65d00730a4b5ab9c2c0a8952b7b}{perlin\+\_\+interp}} (\mbox{\hyperlink{classvec3}{vec3}} c\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}, double u, double v, double w)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvec3}{vec3}} $\ast$ \mbox{\hyperlink{classperlin_a47230eea81f30b5e6c47974d079edb6a}{ranvec}}
+\item 
+int $\ast$ \mbox{\hyperlink{classperlin_a234125c72bb9432993ae1d3524db8bfc}{perm\+\_\+x}}
+\item 
+int $\ast$ \mbox{\hyperlink{classperlin_adfbca9d007f1ea0461dea93655a4208b}{perm\+\_\+y}}
+\item 
+int $\ast$ \mbox{\hyperlink{classperlin_a0e12d2b3c31e57a4bedbdbd3afb1bd0f}{perm\+\_\+z}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classperlin_ab8be49771fbd19c7f1663159efbe784d}{point\+\_\+count}} = 256
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Perlin.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classperlin_a3cd4f25507bf2af91f36be5b5647b123}\label{classperlin_a3cd4f25507bf2af91f36be5b5647b123}} 
+\index{perlin@{perlin}!perlin@{perlin}}
+\index{perlin@{perlin}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perlin()}{perlin()}}
+{\footnotesize\ttfamily perlin\+::perlin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 9 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a3cd4f25507bf2af91f36be5b5647b123_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classperlin_ad06e3d14a3d5e49a30bd015952c4c875}\label{classperlin_ad06e3d14a3d5e49a30bd015952c4c875}} 
+\index{perlin@{perlin}!````~perlin@{$\sim$perlin}}
+\index{````~perlin@{$\sim$perlin}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{$\sim$perlin()}{~perlin()}}
+{\footnotesize\ttfamily perlin\+::$\sim$perlin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Perlin.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classperlin_af9aedcbddac358255985cd0c57a32223}\label{classperlin_af9aedcbddac358255985cd0c57a32223}} 
+\index{perlin@{perlin}!noise@{noise}}
+\index{noise@{noise}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{noise()}{noise()}}
+{\footnotesize\ttfamily double perlin\+::noise (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_af9aedcbddac358255985cd0c57a32223_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_af9aedcbddac358255985cd0c57a32223_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classperlin_a087f2c5a40b441a5586844250f6a3492}\label{classperlin_a087f2c5a40b441a5586844250f6a3492}} 
+\index{perlin@{perlin}!perlin\_generate\_perm@{perlin\_generate\_perm}}
+\index{perlin\_generate\_perm@{perlin\_generate\_perm}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perlin\_generate\_perm()}{perlin\_generate\_perm()}}
+{\footnotesize\ttfamily static int$\ast$ perlin\+::perlin\+\_\+generate\+\_\+perm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 69 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a087f2c5a40b441a5586844250f6a3492_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a087f2c5a40b441a5586844250f6a3492_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classperlin_a0582d65d00730a4b5ab9c2c0a8952b7b}\label{classperlin_a0582d65d00730a4b5ab9c2c0a8952b7b}} 
+\index{perlin@{perlin}!perlin\_interp@{perlin\_interp}}
+\index{perlin\_interp@{perlin\_interp}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perlin\_interp()}{perlin\_interp()}}
+{\footnotesize\ttfamily static double perlin\+::perlin\+\_\+interp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvec3}{vec3}}}]{c\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}\mbox{[}2\mbox{]},  }\item[{double}]{u,  }\item[{double}]{v,  }\item[{double}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 89 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a0582d65d00730a4b5ab9c2c0a8952b7b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a0582d65d00730a4b5ab9c2c0a8952b7b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classperlin_a1b5c348ac82cdfe0b83526b45fb2d535}\label{classperlin_a1b5c348ac82cdfe0b83526b45fb2d535}} 
+\index{perlin@{perlin}!permute@{permute}}
+\index{permute@{permute}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{permute()}{permute()}}
+{\footnotesize\ttfamily static void perlin\+::permute (\begin{DoxyParamCaption}\item[{int $\ast$}]{p,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 80 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a1b5c348ac82cdfe0b83526b45fb2d535_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_a1b5c348ac82cdfe0b83526b45fb2d535_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classperlin_ac8989f10f7f91777ad66143fc3f584d2}\label{classperlin_ac8989f10f7f91777ad66143fc3f584d2}} 
+\index{perlin@{perlin}!turb@{turb}}
+\index{turb@{turb}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{turb()}{turb()}}
+{\footnotesize\ttfamily double perlin\+::turb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{p,  }\item[{int}]{depth = {\ttfamily 7} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 48 of file Perlin.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classperlin_ac8989f10f7f91777ad66143fc3f584d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classperlin_a234125c72bb9432993ae1d3524db8bfc}\label{classperlin_a234125c72bb9432993ae1d3524db8bfc}} 
+\index{perlin@{perlin}!perm\_x@{perm\_x}}
+\index{perm\_x@{perm\_x}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perm\_x}{perm\_x}}
+{\footnotesize\ttfamily int$\ast$ perlin\+::perm\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 65 of file Perlin.\+h.
+
+\mbox{\Hypertarget{classperlin_adfbca9d007f1ea0461dea93655a4208b}\label{classperlin_adfbca9d007f1ea0461dea93655a4208b}} 
+\index{perlin@{perlin}!perm\_y@{perm\_y}}
+\index{perm\_y@{perm\_y}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perm\_y}{perm\_y}}
+{\footnotesize\ttfamily int$\ast$ perlin\+::perm\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 66 of file Perlin.\+h.
+
+\mbox{\Hypertarget{classperlin_a0e12d2b3c31e57a4bedbdbd3afb1bd0f}\label{classperlin_a0e12d2b3c31e57a4bedbdbd3afb1bd0f}} 
+\index{perlin@{perlin}!perm\_z@{perm\_z}}
+\index{perm\_z@{perm\_z}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{perm\_z}{perm\_z}}
+{\footnotesize\ttfamily int$\ast$ perlin\+::perm\+\_\+z\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 67 of file Perlin.\+h.
+
+\mbox{\Hypertarget{classperlin_ab8be49771fbd19c7f1663159efbe784d}\label{classperlin_ab8be49771fbd19c7f1663159efbe784d}} 
+\index{perlin@{perlin}!point\_count@{point\_count}}
+\index{point\_count@{point\_count}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{point\_count}{point\_count}}
+{\footnotesize\ttfamily const int perlin\+::point\+\_\+count = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 63 of file Perlin.\+h.
+
+\mbox{\Hypertarget{classperlin_a47230eea81f30b5e6c47974d079edb6a}\label{classperlin_a47230eea81f30b5e6c47974d079edb6a}} 
+\index{perlin@{perlin}!ranvec@{ranvec}}
+\index{ranvec@{ranvec}!perlin@{perlin}}
+\doxysubsubsection{\texorpdfstring{ranvec}{ranvec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec3}{vec3}}$\ast$ perlin\+::ranvec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 64 of file Perlin.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Geometry/\+Include/\mbox{\hyperlink{_perlin_8h}{Perlin.\+h}}\end{DoxyCompactItemize}

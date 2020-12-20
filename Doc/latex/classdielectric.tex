@@ -1,0 +1,124 @@
+\hypertarget{classdielectric}{}\doxysection{dielectric Class Reference}
+\label{classdielectric}\index{dielectric@{dielectric}}
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+
+
+Inheritance diagram for dielectric\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classdielectric__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dielectric\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classdielectric__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdielectric_a41d64928c380a59555750a928ae92a63}{dielectric}} (double index\+\_\+of\+\_\+refraction)
+\item 
+virtual bool \mbox{\hyperlink{classdielectric_ad4aa31e8e0ba3e59762ce90799c21762}{scatter}} (const \mbox{\hyperlink{classray}{ray}} \&r\+\_\+in, const \mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&rec, \mbox{\hyperlink{_vector3d_8h_a54655a19ac6428ab22c6f2d7ec0413c4}{color}} \&attenuation, \mbox{\hyperlink{classray}{ray}} \&scattered) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classdielectric_a884c836520a1d559cc5cef5fec1d903e}{ir}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classdielectric_a97bfa6c4d5267b83785c893b9326169e}{reflectance}} (double cosine, double ref\+\_\+idx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 60 of file Material.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdielectric_a41d64928c380a59555750a928ae92a63}\label{classdielectric_a41d64928c380a59555750a928ae92a63}} 
+\index{dielectric@{dielectric}!dielectric@{dielectric}}
+\index{dielectric@{dielectric}!dielectric@{dielectric}}
+\doxysubsubsection{\texorpdfstring{dielectric()}{dielectric()}}
+{\footnotesize\ttfamily dielectric\+::dielectric (\begin{DoxyParamCaption}\item[{double}]{index\+\_\+of\+\_\+refraction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file Material.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdielectric_a97bfa6c4d5267b83785c893b9326169e}\label{classdielectric_a97bfa6c4d5267b83785c893b9326169e}} 
+\index{dielectric@{dielectric}!reflectance@{reflectance}}
+\index{reflectance@{reflectance}!dielectric@{dielectric}}
+\doxysubsubsection{\texorpdfstring{reflectance()}{reflectance()}}
+{\footnotesize\ttfamily static double dielectric\+::reflectance (\begin{DoxyParamCaption}\item[{double}]{cosine,  }\item[{double}]{ref\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 90 of file Material.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdielectric_a97bfa6c4d5267b83785c893b9326169e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdielectric_ad4aa31e8e0ba3e59762ce90799c21762}\label{classdielectric_ad4aa31e8e0ba3e59762ce90799c21762}} 
+\index{dielectric@{dielectric}!scatter@{scatter}}
+\index{scatter@{scatter}!dielectric@{dielectric}}
+\doxysubsubsection{\texorpdfstring{scatter()}{scatter()}}
+{\footnotesize\ttfamily virtual bool dielectric\+::scatter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classray}{ray}} \&}]{r\+\_\+in,  }\item[{const \mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&}]{rec,  }\item[{\mbox{\hyperlink{_vector3d_8h_a54655a19ac6428ab22c6f2d7ec0413c4}{color}} \&}]{attenuation,  }\item[{\mbox{\hyperlink{classray}{ray}} \&}]{scattered }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmaterial_ada24c67820c20d312f336b3fa0a672d8}{material}}.
+
+
+
+Definition at line 64 of file Material.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdielectric_ad4aa31e8e0ba3e59762ce90799c21762_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdielectric_a884c836520a1d559cc5cef5fec1d903e}\label{classdielectric_a884c836520a1d559cc5cef5fec1d903e}} 
+\index{dielectric@{dielectric}!ir@{ir}}
+\index{ir@{ir}!dielectric@{dielectric}}
+\doxysubsubsection{\texorpdfstring{ir}{ir}}
+{\footnotesize\ttfamily double dielectric\+::ir}
+
+
+
+Definition at line 87 of file Material.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Render/\+Include/\mbox{\hyperlink{_material_8h}{Material.\+h}}\end{DoxyCompactItemize}

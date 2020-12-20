@@ -1,0 +1,157 @@
+\hypertarget{classbox}{}\doxysection{box Class Reference}
+\label{classbox}\index{box@{box}}
+
+
+{\ttfamily \#include $<$Box.\+h$>$}
+
+
+
+Inheritance diagram for box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbox__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbox__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbox_a1ca802dd9502ab576e4786c06325fd94}{box}} ()
+\item 
+\mbox{\hyperlink{classbox_a274aab8a96b082678a5e7e7fd0091532}{box}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&p0, const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&p1, shared\+\_\+ptr$<$ \mbox{\hyperlink{classmaterial}{material}} $>$ ptr)
+\item 
+virtual bool \mbox{\hyperlink{classbox_ad16f4c815f0014366db6281388883d3c}{hit}} (const \mbox{\hyperlink{classray}{ray}} \&r, double t\+\_\+min, double t\+\_\+max, \mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&rec) const override
+\item 
+virtual bool \mbox{\hyperlink{classbox_a6de88cf3e09e6d8630431fc3c6e43b1c}{bounding\+\_\+box}} (double time0, double time1, \mbox{\hyperlink{classaabb}{aabb}} \&output\+\_\+box) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classbox_ab57efbf0fbd541034fb12efd85dea1bf}{box\+\_\+min}}
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classbox_afdfa7be40483806ae659ba3e0042c83c}{box\+\_\+max}}
+\item 
+\mbox{\hyperlink{classhittable__list}{hittable\+\_\+list}} \mbox{\hyperlink{classbox_ade764fd8782481eac7959cb90883def1}{sides}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Box.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbox_a1ca802dd9502ab576e4786c06325fd94}\label{classbox_a1ca802dd9502ab576e4786c06325fd94}} 
+\index{box@{box}!box@{box}}
+\index{box@{box}!box@{box}}
+\doxysubsubsection{\texorpdfstring{box()}{box()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily box\+::box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 12 of file Box.\+h.
+
+\mbox{\Hypertarget{classbox_a274aab8a96b082678a5e7e7fd0091532}\label{classbox_a274aab8a96b082678a5e7e7fd0091532}} 
+\index{box@{box}!box@{box}}
+\index{box@{box}!box@{box}}
+\doxysubsubsection{\texorpdfstring{box()}{box()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily box\+::box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{p0,  }\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{p1,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classmaterial}{material}} $>$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Box.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbox_a274aab8a96b082678a5e7e7fd0091532_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbox_a6de88cf3e09e6d8630431fc3c6e43b1c}\label{classbox_a6de88cf3e09e6d8630431fc3c6e43b1c}} 
+\index{box@{box}!bounding\_box@{bounding\_box}}
+\index{bounding\_box@{bounding\_box}!box@{box}}
+\doxysubsubsection{\texorpdfstring{bounding\_box()}{bounding\_box()}}
+{\footnotesize\ttfamily virtual bool box\+::bounding\+\_\+box (\begin{DoxyParamCaption}\item[{double}]{time0,  }\item[{double}]{time1,  }\item[{\mbox{\hyperlink{classaabb}{aabb}} \&}]{output\+\_\+box }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 17 of file Box.\+h.
+
+\mbox{\Hypertarget{classbox_ad16f4c815f0014366db6281388883d3c}\label{classbox_ad16f4c815f0014366db6281388883d3c}} 
+\index{box@{box}!hit@{hit}}
+\index{hit@{hit}!box@{box}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily bool box\+::hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classray}{ray}} \&}]{r,  }\item[{double}]{t\+\_\+min,  }\item[{double}]{t\+\_\+max,  }\item[{\mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&}]{rec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhittable_a0a6ee133e5e89542e94951b397e1266e}{hittable}}.
+
+
+
+Definition at line 43 of file Box.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbox_ad16f4c815f0014366db6281388883d3c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbox_afdfa7be40483806ae659ba3e0042c83c}\label{classbox_afdfa7be40483806ae659ba3e0042c83c}} 
+\index{box@{box}!box\_max@{box\_max}}
+\index{box\_max@{box\_max}!box@{box}}
+\doxysubsubsection{\texorpdfstring{box\_max}{box\_max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} box\+::box\+\_\+max}
+
+
+
+Definition at line 24 of file Box.\+h.
+
+\mbox{\Hypertarget{classbox_ab57efbf0fbd541034fb12efd85dea1bf}\label{classbox_ab57efbf0fbd541034fb12efd85dea1bf}} 
+\index{box@{box}!box\_min@{box\_min}}
+\index{box\_min@{box\_min}!box@{box}}
+\doxysubsubsection{\texorpdfstring{box\_min}{box\_min}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} box\+::box\+\_\+min}
+
+
+
+Definition at line 23 of file Box.\+h.
+
+\mbox{\Hypertarget{classbox_ade764fd8782481eac7959cb90883def1}\label{classbox_ade764fd8782481eac7959cb90883def1}} 
+\index{box@{box}!sides@{sides}}
+\index{sides@{sides}!box@{box}}
+\doxysubsubsection{\texorpdfstring{sides}{sides}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhittable__list}{hittable\+\_\+list}} box\+::sides}
+
+
+
+Definition at line 25 of file Box.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Geometry/\+Include/\mbox{\hyperlink{_box_8h}{Box.\+h}}\end{DoxyCompactItemize}

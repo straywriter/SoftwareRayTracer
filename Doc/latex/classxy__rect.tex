@@ -1,0 +1,185 @@
+\hypertarget{classxy__rect}{}\doxysection{xy\+\_\+rect Class Reference}
+\label{classxy__rect}\index{xy\_rect@{xy\_rect}}
+
+
+{\ttfamily \#include $<$Rect.\+h$>$}
+
+
+
+Inheritance diagram for xy\+\_\+rect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classxy__rect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for xy\+\_\+rect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classxy__rect__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classxy__rect_a0b4b2092e7d1abd4016fac80d3e57558}{xy\+\_\+rect}} ()
+\item 
+\mbox{\hyperlink{classxy__rect_adf44890a1b822ad91c85678e70e977e9}{xy\+\_\+rect}} (double \+\_\+x0, double \+\_\+x1, double \+\_\+y0, double \+\_\+y1, double \+\_\+k, shared\+\_\+ptr$<$ \mbox{\hyperlink{classmaterial}{material}} $>$ mat)
+\item 
+virtual bool \mbox{\hyperlink{classxy__rect_a8e277426cb8f6725df17e482b9fadb91}{hit}} (const \mbox{\hyperlink{classray}{ray}} \&r, double t\+\_\+min, double t\+\_\+max, \mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&rec) const override
+\item 
+virtual bool \mbox{\hyperlink{classxy__rect_a717cc9910fe738fba844cfc0e11696bd}{bounding\+\_\+box}} (double time0, double time1, \mbox{\hyperlink{classaabb}{aabb}} \&output\+\_\+box) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classmaterial}{material}} $>$ \mbox{\hyperlink{classxy__rect_a84f58a3d5e14d449be41eb6a23cfa83a}{mp}}
+\item 
+double \mbox{\hyperlink{classxy__rect_ae1e63682bf0eb19f0764f1886328a1b0}{x0}}
+\item 
+double \mbox{\hyperlink{classxy__rect_a019f5ce678915d4f8f1f20c6e71ffea7}{x1}}
+\item 
+double \mbox{\hyperlink{classxy__rect_a26be9857285f4b1fbbe3c21685b2d002}{y0}}
+\item 
+double \mbox{\hyperlink{classxy__rect_aae91c9af4e5ace5d4253ff0c2121ce57}{y1}}
+\item 
+double \mbox{\hyperlink{classxy__rect_a3ae73ccf48f5496e662fda1d51cd02bb}{k}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Rect.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classxy__rect_a0b4b2092e7d1abd4016fac80d3e57558}\label{classxy__rect_a0b4b2092e7d1abd4016fac80d3e57558}} 
+\index{xy\_rect@{xy\_rect}!xy\_rect@{xy\_rect}}
+\index{xy\_rect@{xy\_rect}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{xy\_rect()}{xy\_rect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily xy\+\_\+rect\+::xy\+\_\+rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 9 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_adf44890a1b822ad91c85678e70e977e9}\label{classxy__rect_adf44890a1b822ad91c85678e70e977e9}} 
+\index{xy\_rect@{xy\_rect}!xy\_rect@{xy\_rect}}
+\index{xy\_rect@{xy\_rect}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{xy\_rect()}{xy\_rect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily xy\+\_\+rect\+::xy\+\_\+rect (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x0,  }\item[{double}]{\+\_\+x1,  }\item[{double}]{\+\_\+y0,  }\item[{double}]{\+\_\+y1,  }\item[{double}]{\+\_\+k,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classmaterial}{material}} $>$}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 11 of file Rect.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classxy__rect_a717cc9910fe738fba844cfc0e11696bd}\label{classxy__rect_a717cc9910fe738fba844cfc0e11696bd}} 
+\index{xy\_rect@{xy\_rect}!bounding\_box@{bounding\_box}}
+\index{bounding\_box@{bounding\_box}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{bounding\_box()}{bounding\_box()}}
+{\footnotesize\ttfamily virtual bool xy\+\_\+rect\+::bounding\+\_\+box (\begin{DoxyParamCaption}\item[{double}]{time0,  }\item[{double}]{time1,  }\item[{\mbox{\hyperlink{classaabb}{aabb}} \&}]{output\+\_\+box }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 17 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_a8e277426cb8f6725df17e482b9fadb91}\label{classxy__rect_a8e277426cb8f6725df17e482b9fadb91}} 
+\index{xy\_rect@{xy\_rect}!hit@{hit}}
+\index{hit@{hit}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily bool xy\+\_\+rect\+::hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classray}{ray}} \&}]{r,  }\item[{double}]{t\+\_\+min,  }\item[{double}]{t\+\_\+max,  }\item[{\mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&}]{rec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhittable_a0a6ee133e5e89542e94951b397e1266e}{hittable}}.
+
+
+
+Definition at line 73 of file Rect.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classxy__rect_a8e277426cb8f6725df17e482b9fadb91_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classxy__rect_a3ae73ccf48f5496e662fda1d51cd02bb}\label{classxy__rect_a3ae73ccf48f5496e662fda1d51cd02bb}} 
+\index{xy\_rect@{xy\_rect}!k@{k}}
+\index{k@{k}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily double xy\+\_\+rect\+::k}
+
+
+
+Definition at line 26 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_a84f58a3d5e14d449be41eb6a23cfa83a}\label{classxy__rect_a84f58a3d5e14d449be41eb6a23cfa83a}} 
+\index{xy\_rect@{xy\_rect}!mp@{mp}}
+\index{mp@{mp}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{mp}{mp}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classmaterial}{material}}$>$ xy\+\_\+rect\+::mp}
+
+
+
+Definition at line 25 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_ae1e63682bf0eb19f0764f1886328a1b0}\label{classxy__rect_ae1e63682bf0eb19f0764f1886328a1b0}} 
+\index{xy\_rect@{xy\_rect}!x0@{x0}}
+\index{x0@{x0}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{x0}{x0}}
+{\footnotesize\ttfamily double xy\+\_\+rect\+::x0}
+
+
+
+Definition at line 26 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_a019f5ce678915d4f8f1f20c6e71ffea7}\label{classxy__rect_a019f5ce678915d4f8f1f20c6e71ffea7}} 
+\index{xy\_rect@{xy\_rect}!x1@{x1}}
+\index{x1@{x1}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily double xy\+\_\+rect\+::x1}
+
+
+
+Definition at line 26 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_a26be9857285f4b1fbbe3c21685b2d002}\label{classxy__rect_a26be9857285f4b1fbbe3c21685b2d002}} 
+\index{xy\_rect@{xy\_rect}!y0@{y0}}
+\index{y0@{y0}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{y0}{y0}}
+{\footnotesize\ttfamily double xy\+\_\+rect\+::y0}
+
+
+
+Definition at line 26 of file Rect.\+h.
+
+\mbox{\Hypertarget{classxy__rect_aae91c9af4e5ace5d4253ff0c2121ce57}\label{classxy__rect_aae91c9af4e5ace5d4253ff0c2121ce57}} 
+\index{xy\_rect@{xy\_rect}!y1@{y1}}
+\index{y1@{y1}!xy\_rect@{xy\_rect}}
+\doxysubsubsection{\texorpdfstring{y1}{y1}}
+{\footnotesize\ttfamily double xy\+\_\+rect\+::y1}
+
+
+
+Definition at line 26 of file Rect.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Geometry/\+Include/\mbox{\hyperlink{_rect_8h}{Rect.\+h}}\end{DoxyCompactItemize}

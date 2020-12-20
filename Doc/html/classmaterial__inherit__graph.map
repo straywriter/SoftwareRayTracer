@@ -1,0 +1,6 @@
+<map id="material" name="material">
+<area shape="rect" id="node1" title=" " alt="" coords="251,5,405,111"/>
+<area shape="rect" id="node2" href="$classdielectric.html" title=" " alt="" coords="5,159,208,312"/>
+<area shape="rect" id="node3" href="$classlambertian.html" title=" " alt="" coords="233,171,423,300"/>
+<area shape="rect" id="node4" href="$classmetal.html" title=" " alt="" coords="448,159,603,312"/>
+</map>

@@ -1,0 +1,153 @@
+\hypertarget{classhittable__list}{}\doxysection{hittable\+\_\+list Class Reference}
+\label{classhittable__list}\index{hittable\_list@{hittable\_list}}
+
+
+{\ttfamily \#include $<$Hit.\+h$>$}
+
+
+
+Inheritance diagram for hittable\+\_\+list\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classhittable__list__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hittable\+\_\+list\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classhittable__list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhittable__list_ab5677053409dc9db3807eb0fd91c84ab}{hittable\+\_\+list}} ()
+\item 
+\mbox{\hyperlink{classhittable__list_a6d9d2cda6092972cb38ed9eb9a53d613}{hittable\+\_\+list}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classhittable}{hittable}} $>$ object)
+\item 
+void \mbox{\hyperlink{classhittable__list_a74cf8b7ee9846ac7bbbb634863e253f6}{clear}} ()
+\item 
+void \mbox{\hyperlink{classhittable__list_a6f51233df1bf18c6665a9ec36e475f39}{add}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classhittable}{hittable}} $>$ object)
+\item 
+virtual bool \mbox{\hyperlink{classhittable__list_aae6c565de23c3bdbea61f79b78ce8326}{hit}} (const \mbox{\hyperlink{classray}{ray}} \&r, double t\+\_\+min, double t\+\_\+max, \mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&rec) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classhittable}{hittable}} $>$ $>$ \mbox{\hyperlink{classhittable__list_a4de3045519f5de1f5d20e53c52b916be}{objects}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file Hit.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhittable__list_ab5677053409dc9db3807eb0fd91c84ab}\label{classhittable__list_ab5677053409dc9db3807eb0fd91c84ab}} 
+\index{hittable\_list@{hittable\_list}!hittable\_list@{hittable\_list}}
+\index{hittable\_list@{hittable\_list}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{hittable\_list()}{hittable\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hittable\+\_\+list\+::hittable\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 14 of file Hit.\+h.
+
+\mbox{\Hypertarget{classhittable__list_a6d9d2cda6092972cb38ed9eb9a53d613}\label{classhittable__list_a6d9d2cda6092972cb38ed9eb9a53d613}} 
+\index{hittable\_list@{hittable\_list}!hittable\_list@{hittable\_list}}
+\index{hittable\_list@{hittable\_list}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{hittable\_list()}{hittable\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hittable\+\_\+list\+::hittable\+\_\+list (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classhittable}{hittable}} $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file Hit.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhittable__list_a6d9d2cda6092972cb38ed9eb9a53d613_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhittable__list_a6f51233df1bf18c6665a9ec36e475f39}\label{classhittable__list_a6f51233df1bf18c6665a9ec36e475f39}} 
+\index{hittable\_list@{hittable\_list}!add@{add}}
+\index{add@{add}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void hittable\+\_\+list\+::add (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classhittable}{hittable}} $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file Hit.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhittable__list_a6f51233df1bf18c6665a9ec36e475f39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classhittable__list_a74cf8b7ee9846ac7bbbb634863e253f6}\label{classhittable__list_a74cf8b7ee9846ac7bbbb634863e253f6}} 
+\index{hittable\_list@{hittable\_list}!clear@{clear}}
+\index{clear@{clear}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void hittable\+\_\+list\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 17 of file Hit.\+h.
+
+\mbox{\Hypertarget{classhittable__list_aae6c565de23c3bdbea61f79b78ce8326}\label{classhittable__list_aae6c565de23c3bdbea61f79b78ce8326}} 
+\index{hittable\_list@{hittable\_list}!hit@{hit}}
+\index{hit@{hit}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily bool hittable\+\_\+list\+::hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classray}{ray}} \&}]{r,  }\item[{double}]{t\+\_\+min,  }\item[{double}]{t\+\_\+max,  }\item[{\mbox{\hyperlink{structhit__record}{hit\+\_\+record}} \&}]{rec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhittable_a0a6ee133e5e89542e94951b397e1266e}{hittable}}.
+
+
+
+Definition at line 28 of file Hit.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhittable__list_aae6c565de23c3bdbea61f79b78ce8326_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhittable__list_a4de3045519f5de1f5d20e53c52b916be}\label{classhittable__list_a4de3045519f5de1f5d20e53c52b916be}} 
+\index{hittable\_list@{hittable\_list}!objects@{objects}}
+\index{objects@{objects}!hittable\_list@{hittable\_list}}
+\doxysubsubsection{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily std\+::vector$<$shared\+\_\+ptr$<$\mbox{\hyperlink{classhittable}{hittable}}$>$ $>$ hittable\+\_\+list\+::objects}
+
+
+
+Definition at line 24 of file Hit.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Render/\+Include/\mbox{\hyperlink{_hit_8h}{Hit.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+\hypertarget{classray}{}\doxysection{ray Class Reference}
+\label{classray}\index{ray@{ray}}
+
+
+{\ttfamily \#include $<$Ray.\+h$>$}
+
+
+
+Collaboration diagram for ray\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classray_a6a81906c090ceff40ac9a288639f4861}{ray}} ()
+\item 
+\mbox{\hyperlink{classray_a7def5725591c1dda81936aa89c2003f4}{ray}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&\mbox{\hyperlink{classray_abc229e41909f1f0aa0290894d363408a}{origin}}, const \mbox{\hyperlink{classvec3}{vec3}} \&\mbox{\hyperlink{classray_a28fa3264fc44eef1c968797f49aa8d7e}{direction}})
+\item 
+\mbox{\hyperlink{classray_a1073633a2206263dc2505f4f6724515d}{ray}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&\mbox{\hyperlink{classray_abc229e41909f1f0aa0290894d363408a}{origin}}, const \mbox{\hyperlink{classvec3}{vec3}} \&\mbox{\hyperlink{classray_a28fa3264fc44eef1c968797f49aa8d7e}{direction}}, double \mbox{\hyperlink{classray_a4273c211697765ba707d3c17e4523209}{time}})
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classray_abc229e41909f1f0aa0290894d363408a}{origin}} () const
+\item 
+\mbox{\hyperlink{classvec3}{vec3}} \mbox{\hyperlink{classray_a28fa3264fc44eef1c968797f49aa8d7e}{direction}} () const
+\item 
+double \mbox{\hyperlink{classray_a4273c211697765ba707d3c17e4523209}{time}} () const
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classray_a9b41fb48d2e3bce032471a42a1cedc70}{at}} (double t) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classray_ab138057c1fab1c79b48817423119fcc7}{orig}}
+\item 
+\mbox{\hyperlink{classvec3}{vec3}} \mbox{\hyperlink{classray_afb389c640e62bd7a5c0318901ec28588}{dir}}
+\item 
+double \mbox{\hyperlink{classray_a1777dcf1878543083bacb9267b606f3a}{tm}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Ray.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classray_a6a81906c090ceff40ac9a288639f4861}\label{classray_a6a81906c090ceff40ac9a288639f4861}} 
+\index{ray@{ray}!ray@{ray}}
+\index{ray@{ray}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{ray()}{ray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ray\+::ray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 7 of file Ray.\+h.
+
+\mbox{\Hypertarget{classray_a7def5725591c1dda81936aa89c2003f4}\label{classray_a7def5725591c1dda81936aa89c2003f4}} 
+\index{ray@{ray}!ray@{ray}}
+\index{ray@{ray}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{ray()}{ray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ray\+::ray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{classvec3}{vec3}} \&}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 8 of file Ray.\+h.
+
+\mbox{\Hypertarget{classray_a1073633a2206263dc2505f4f6724515d}\label{classray_a1073633a2206263dc2505f4f6724515d}} 
+\index{ray@{ray}!ray@{ray}}
+\index{ray@{ray}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{ray()}{ray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ray\+::ray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{origin,  }\item[{const \mbox{\hyperlink{classvec3}{vec3}} \&}]{direction,  }\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 12 of file Ray.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classray_a9b41fb48d2e3bce032471a42a1cedc70}\label{classray_a9b41fb48d2e3bce032471a42a1cedc70}} 
+\index{ray@{ray}!at@{at}}
+\index{at@{at}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} ray\+::at (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Ray.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classray_a9b41fb48d2e3bce032471a42a1cedc70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classray_a28fa3264fc44eef1c968797f49aa8d7e}\label{classray_a28fa3264fc44eef1c968797f49aa8d7e}} 
+\index{ray@{ray}!direction@{direction}}
+\index{direction@{direction}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec3}{vec3}} ray\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 17 of file Ray.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classray_a28fa3264fc44eef1c968797f49aa8d7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classray_abc229e41909f1f0aa0290894d363408a}\label{classray_abc229e41909f1f0aa0290894d363408a}} 
+\index{ray@{ray}!origin@{origin}}
+\index{origin@{origin}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{origin()}{origin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} ray\+::origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file Ray.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classray_abc229e41909f1f0aa0290894d363408a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classray_a4273c211697765ba707d3c17e4523209}\label{classray_a4273c211697765ba707d3c17e4523209}} 
+\index{ray@{ray}!time@{time}}
+\index{time@{time}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{time()}{time()}}
+{\footnotesize\ttfamily double ray\+::time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 18 of file Ray.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classray_a4273c211697765ba707d3c17e4523209_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classray_afb389c640e62bd7a5c0318901ec28588}\label{classray_afb389c640e62bd7a5c0318901ec28588}} 
+\index{ray@{ray}!dir@{dir}}
+\index{dir@{dir}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvec3}{vec3}} ray\+::dir}
+
+
+
+Definition at line 26 of file Ray.\+h.
+
+\mbox{\Hypertarget{classray_ab138057c1fab1c79b48817423119fcc7}\label{classray_ab138057c1fab1c79b48817423119fcc7}} 
+\index{ray@{ray}!orig@{orig}}
+\index{orig@{orig}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{orig}{orig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} ray\+::orig}
+
+
+
+Definition at line 25 of file Ray.\+h.
+
+\mbox{\Hypertarget{classray_a1777dcf1878543083bacb9267b606f3a}\label{classray_a1777dcf1878543083bacb9267b606f3a}} 
+\index{ray@{ray}!tm@{tm}}
+\index{tm@{tm}!ray@{ray}}
+\doxysubsubsection{\texorpdfstring{tm}{tm}}
+{\footnotesize\ttfamily double ray\+::tm}
+
+
+
+Definition at line 27 of file Ray.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Geometry/\+Include/\mbox{\hyperlink{_ray_8h}{Ray.\+h}}\end{DoxyCompactItemize}

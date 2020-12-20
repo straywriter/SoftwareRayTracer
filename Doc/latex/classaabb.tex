@@ -1,0 +1,191 @@
+\hypertarget{classaabb}{}\doxysection{aabb Class Reference}
+\label{classaabb}\index{aabb@{aabb}}
+
+
+{\ttfamily \#include $<$A\+A\+B\+B.\+h$>$}
+
+
+
+Collaboration diagram for aabb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classaabb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaabb_a997edf5656d7753d7b2febed0d4b2a6d}{aabb}} ()
+\item 
+\mbox{\hyperlink{classaabb_aac2635d2ceb80db48af9d06e07a2a254}{aabb}} (const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&a, const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&b)
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classaabb_aeb70e54fd7d1269fde4a6473f46914fb}{min}} () const
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classaabb_a80b59e03b8ebe6dbe076dbb06e96fa07}{max}} () const
+\item 
+bool \mbox{\hyperlink{classaabb_a4f3471af81f3122b8cf662ef9256b539}{hit}} (const \mbox{\hyperlink{classray}{ray}} \&r, double t\+\_\+min, double t\+\_\+max) const
+\item 
+double \mbox{\hyperlink{classaabb_a67fb4a14bce81d9208429e71be2c64bc}{area}} () const
+\item 
+int \mbox{\hyperlink{classaabb_aec836b12088e586f23c1aa41d6d00903}{longest\+\_\+axis}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classaabb_a06c7f1e29494fa31888ca1434d5c7729}{minimum}}
+\item 
+\mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \mbox{\hyperlink{classaabb_aba1bdc2d21744d0b421ae4a3d8633dc7}{maximum}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file A\+A\+B\+B.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaabb_a997edf5656d7753d7b2febed0d4b2a6d}\label{classaabb_a997edf5656d7753d7b2febed0d4b2a6d}} 
+\index{aabb@{aabb}!aabb@{aabb}}
+\index{aabb@{aabb}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{aabb()}{aabb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily aabb\+::aabb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 9 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{classaabb_aac2635d2ceb80db48af9d06e07a2a254}\label{classaabb_aac2635d2ceb80db48af9d06e07a2a254}} 
+\index{aabb@{aabb}!aabb@{aabb}}
+\index{aabb@{aabb}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{aabb()}{aabb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily aabb\+::aabb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{a,  }\item[{const \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 10 of file A\+A\+B\+B.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaabb_a67fb4a14bce81d9208429e71be2c64bc}\label{classaabb_a67fb4a14bce81d9208429e71be2c64bc}} 
+\index{aabb@{aabb}!area@{area}}
+\index{area@{area}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double aabb\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file A\+A\+B\+B.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classaabb_a67fb4a14bce81d9208429e71be2c64bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classaabb_a4f3471af81f3122b8cf662ef9256b539}\label{classaabb_a4f3471af81f3122b8cf662ef9256b539}} 
+\index{aabb@{aabb}!hit@{hit}}
+\index{hit@{hit}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily bool aabb\+::hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classray}{ray}} \&}]{r,  }\item[{double}]{t\+\_\+min,  }\item[{double}]{t\+\_\+max }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file A\+A\+B\+B.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classaabb_a4f3471af81f3122b8cf662ef9256b539_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classaabb_aec836b12088e586f23c1aa41d6d00903}\label{classaabb_aec836b12088e586f23c1aa41d6d00903}} 
+\index{aabb@{aabb}!longest\_axis@{longest\_axis}}
+\index{longest\_axis@{longest\_axis}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{longest\_axis()}{longest\_axis()}}
+{\footnotesize\ttfamily int aabb\+::longest\+\_\+axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file A\+A\+B\+B.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classaabb_aec836b12088e586f23c1aa41d6d00903_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classaabb_a80b59e03b8ebe6dbe076dbb06e96fa07}\label{classaabb_a80b59e03b8ebe6dbe076dbb06e96fa07}} 
+\index{aabb@{aabb}!max@{max}}
+\index{max@{max}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} aabb\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 13 of file A\+A\+B\+B.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classaabb_a80b59e03b8ebe6dbe076dbb06e96fa07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classaabb_aeb70e54fd7d1269fde4a6473f46914fb}\label{classaabb_aeb70e54fd7d1269fde4a6473f46914fb}} 
+\index{aabb@{aabb}!min@{min}}
+\index{min@{min}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} aabb\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 12 of file A\+A\+B\+B.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classaabb_aeb70e54fd7d1269fde4a6473f46914fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaabb_aba1bdc2d21744d0b421ae4a3d8633dc7}\label{classaabb_aba1bdc2d21744d0b421ae4a3d8633dc7}} 
+\index{aabb@{aabb}!maximum@{maximum}}
+\index{maximum@{maximum}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{maximum}{maximum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} aabb\+::maximum}
+
+
+
+Definition at line 50 of file A\+A\+B\+B.\+h.
+
+\mbox{\Hypertarget{classaabb_a06c7f1e29494fa31888ca1434d5c7729}\label{classaabb_a06c7f1e29494fa31888ca1434d5c7729}} 
+\index{aabb@{aabb}!minimum@{minimum}}
+\index{minimum@{minimum}!aabb@{aabb}}
+\doxysubsubsection{\texorpdfstring{minimum}{minimum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_vector3d_8h_a23d4d64cd77609f1c386634d2c940f29}{point3}} aabb\+::minimum}
+
+
+
+Definition at line 49 of file A\+A\+B\+B.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Geometry/\+Include/\mbox{\hyperlink{_a_a_b_b_8h}{A\+A\+B\+B.\+h}}\end{DoxyCompactItemize}

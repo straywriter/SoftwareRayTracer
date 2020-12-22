@@ -15,7 +15,7 @@
  */
 struct HitRecord
 {
-    point3 p;                      //<
+    point3 p;                      //< point 3 position
     Vector3d normal;               //<
     shared_ptr<IMaterial> mat_ptr; //<
     double t;                      //<

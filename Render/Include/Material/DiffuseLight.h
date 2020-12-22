@@ -2,6 +2,10 @@
 #include "IMaterial.h"
 #include "Texture.h"
 
+/**
+ * 
+ * 
+ */
 class DiffuseLight : public IMaterial
 {
   public:

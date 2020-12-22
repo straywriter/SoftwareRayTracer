@@ -26,6 +26,8 @@ class IMaterial
             return color(0,0,0);
         }
         
+//TODO: ???
+
     // virtual color emitted(const ray &r_in, const hit_record &rec, double u, double v, const point3 &p) const
     // {
     //     return color(0, 0, 0);

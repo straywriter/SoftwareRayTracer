@@ -4,6 +4,10 @@
 #include "Render.h"
 #include "AABB.h"
 
+/**
+ * 
+ * 
+ */
 class Sphere : public IHitable
 {
   public:

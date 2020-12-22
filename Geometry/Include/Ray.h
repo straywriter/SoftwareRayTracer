@@ -1,6 +1,10 @@
 #pragma once
 #include "Vector3d.h"
 
+/**
+ * 
+ * 
+ */
 class Ray
 {
      public:

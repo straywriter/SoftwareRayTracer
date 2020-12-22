@@ -2,6 +2,10 @@
 #include "IMaterial.h"
 
 
+/**
+ * 
+ * 
+ */
 class Lambertian : public IMaterial
 {
   public:

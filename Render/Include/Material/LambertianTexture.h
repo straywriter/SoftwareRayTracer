@@ -3,6 +3,10 @@
 
 // TODO
 
+/**
+ * 
+ * 
+ */
 class LambertianTexture : public IMaterial
 {
   public:

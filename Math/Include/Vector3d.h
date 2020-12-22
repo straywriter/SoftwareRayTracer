@@ -191,9 +191,8 @@ class Vector3d
     double e[3]; //<
 };
 
-// Type aliases for vec3
-using point3 = Vector3d; // 3D point
-using color = Vector3d;  // RGB color
+using point3 = Vector3d; //< 3D point
+using color = Vector3d;  //< RGB color
 
 // vec3 Utility Functions
 

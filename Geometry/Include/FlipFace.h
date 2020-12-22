@@ -1,6 +1,10 @@
 #pragma once
 #include "IHitable.h"
 
+/**
+ * 
+ * 
+ */
 class FlipFace : public IHitable
 {
   public:

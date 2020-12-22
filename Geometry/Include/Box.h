@@ -5,6 +5,10 @@
 #include "Hit.h"
 #include "Rect.h"
 
+/**
+ * 
+ * 
+ */
 class Box : public IHitable
 {
   public:

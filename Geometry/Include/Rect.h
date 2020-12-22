@@ -4,6 +4,10 @@
 
 #include "IHitable.h"
 
+/**
+ * 
+ * 
+ */
 class XYRect : public IHitable
 {
   public:

@@ -2,6 +2,10 @@
 
 #include "IHitable.h"
 
+/**
+ * 
+ * 
+ */
 class Translate : public IHitable
 {
   public:

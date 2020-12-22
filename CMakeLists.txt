@@ -23,7 +23,6 @@ set(Source ${Include}  CACHE STRING "" FORCE)
 
 # message(${Math})
 
-# demo 1
 include_directories(${IncludeDir})
 
 

@@ -13,8 +13,8 @@
 #include "Sphere.h"
 
 
-color ray_color(const Ray& r, const hittable& world) {
-    hit_record rec;
+color ray_color(const Ray& r, const IHitable& world) {
+    HitRecord rec;
     if (world.hit(r, 0, infinity, rec)) {
         return 0.5 * (rec.normal + color(1,1,1));
     }
@@ -34,12 +34,12 @@ int main() {
 
     // World
 
-    hittable_list world;
-    world.add(make_shared<sphere>(point3(0,0,-1), 0.5));
-    world.add(make_shared<sphere>(point3(0,-100.5,-1), 100));
+    HittableList world;
+    world.add(make_shared<Sphere>(point3(0,0,-1), 0.5));
+    world.add(make_shared<Sphere>(point3(0,-100.5,-1), 100));
 
     // Camera
-    camera cam;
+    Carmera cam;
 
     // Render
 

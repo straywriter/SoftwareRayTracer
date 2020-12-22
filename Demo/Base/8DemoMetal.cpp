@@ -16,9 +16,9 @@
 
 #include "Material.h"
 
-color ray_color(const Ray &r, const hittable &world, int depth)
+color ray_color(const Ray &r, const IHitable &world, int depth)
 {
-    hit_record rec;
+    HitRecord rec;
 
     // If we've exceeded the ray bounce limit, no more light is gathered.
     if (depth <= 0)
@@ -51,17 +51,17 @@ int main()
 
     // World
 
-    hittable_list world;
+    HittableList world;
 
-    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
-    auto material_center = make_shared<lambertian>(color(0.7, 0.3, 0.3));
-    auto material_left = make_shared<metal>(color(0.8, 0.8, 0.8));
-    auto material_right = make_shared<metal>(color(0.8, 0.6, 0.2));
+    auto material_ground = make_shared<Lambertian>(color(0.8, 0.8, 0.0));
+    auto material_center = make_shared<Lambertian>(color(0.7, 0.3, 0.3));
+    auto material_left = make_shared<Metal>(color(0.8, 0.8, 0.8));
+    auto material_right = make_shared<Metal>(color(0.8, 0.6, 0.2));
 
-    world.add(make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
-    world.add(make_shared<sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
-    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
-    world.add(make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
+    world.add(make_shared<Sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
+    world.add(make_shared<Sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
+    world.add(make_shared<Sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
+    world.add(make_shared<Sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
 
     // Camera
 
@@ -72,7 +72,7 @@ int main()
     auto dist_to_focus = 10.0;
     auto aperture = 0.1;
 
-    camera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus);
+    Carmera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus);
 
     // Render
 

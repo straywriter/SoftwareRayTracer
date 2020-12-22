@@ -11,11 +11,11 @@
  * hitable list is a
  *
  */
-class hittable_list : public hittable
+class HittableList : public IHitable
 {
   public:
     /** Construct a new hittable list object */
-    hittable_list()
+    HittableList()
     {
     }
 
@@ -24,7 +24,7 @@ class hittable_list : public hittable
      *
      * @param object
      */
-    hittable_list(shared_ptr<hittable> object)
+    HittableList(shared_ptr<IHitable> object)
     {
         add(object);
     }
@@ -39,28 +39,60 @@ class hittable_list : public hittable
     }
 
     /**
-     * 
-     * 
-     * @param object 
+     *
+     *
+     * @param object
      */
-    void add(shared_ptr<hittable> object)
+    void add(shared_ptr<IHitable> object)
     {
         objects.push_back(object);
     }
 
-    virtual bool hit(const Ray &r, double t_min, double t_max, hit_record &rec) const override;
+    /**
+     *
+     *
+     * @param r
+     * @param t_min
+     * @param t_max
+     * @param rec
+     * @return true
+     * @return false
+     */
+    virtual bool hit(const Ray &r, double t_min, double t_max, HitRecord &rec) const override;
 
+    /**
+     *
+     *
+     * @param time0
+     * @param time1
+     * @param output_box
+     * @return true
+     * @return false
+     */
     virtual bool bounding_box(double time0, double time1, AABB &output_box) const override;
-    
+
+    /**
+     *
+     *
+     * @param o
+     * @param v
+     * @return double
+     */
     virtual double pdf_value(const Vector3d &o, const Vector3d &v) const override;
 
+    /**
+     *
+     *
+     * @param o
+     * @return Vector3d
+     */
     virtual Vector3d random(const Vector3d &o) const override;
 
   public:
-    std::vector<shared_ptr<hittable>> objects;
+    std::vector<shared_ptr<IHitable>> objects;
 };
 
-double hittable_list::pdf_value(const point3 &o, const Vector3d &v) const
+double HittableList::pdf_value(const point3 &o, const Vector3d &v) const
 {
     auto weight = 1.0 / objects.size();
     auto sum = 0.0;
@@ -71,7 +103,7 @@ double hittable_list::pdf_value(const point3 &o, const Vector3d &v) const
     return sum;
 }
 
-bool hittable_list::bounding_box(double time0, double time1, AABB &output_box) const
+bool HittableList::bounding_box(double time0, double time1, AABB &output_box) const
 {
     if (objects.empty())
         return false;
@@ -90,9 +122,9 @@ bool hittable_list::bounding_box(double time0, double time1, AABB &output_box) c
     return true;
 }
 
-bool hittable_list::hit(const Ray &r, double t_min, double t_max, hit_record &rec) const
+bool HittableList::hit(const Ray &r, double t_min, double t_max, HitRecord &rec) const
 {
-    hit_record temp_rec;
+    HitRecord temp_rec;
     auto hit_anything = false;
     auto closest_so_far = t_max;
 
@@ -109,7 +141,7 @@ bool hittable_list::hit(const Ray &r, double t_min, double t_max, hit_record &re
     return hit_anything;
 }
 
-Vector3d hittable_list::random(const Vector3d &o) const
+Vector3d HittableList::random(const Vector3d &o) const
 {
     auto int_size = static_cast<int>(objects.size());
     return objects[random_int(0, int_size - 1)]->random(o);

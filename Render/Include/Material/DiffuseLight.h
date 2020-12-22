@@ -2,17 +2,17 @@
 #include "IMaterial.h"
 #include "Texture.h"
 
-class diffuse_light : public material
+class DiffuseLight : public IMaterial
 {
   public:
-    diffuse_light(shared_ptr<texture> a) : emit(a)
+    DiffuseLight(shared_ptr<Texture> a) : emit(a)
     {
     }
-    diffuse_light(color c) : emit(make_shared<solid_color>(c))
+    DiffuseLight(color c) : emit(make_shared<SolidColor>(c))
     {
     }
 
-    virtual bool scatter(const Ray &r_in, const hit_record &rec, color &attenuation, Ray &scattered) const override
+    virtual bool scatter(const Ray &r_in, const HitRecord &rec, color &attenuation, Ray &scattered) const override
     {
         return false;
     }
@@ -23,5 +23,5 @@ class diffuse_light : public material
     }
 
   public:
-    shared_ptr<texture> emit;
+    shared_ptr<Texture> emit;
 };

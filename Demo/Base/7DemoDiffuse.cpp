@@ -22,9 +22,9 @@
 //         return -in_unit_sphere;
 // }
 
-color ray_color(const Ray &r, const hittable &world, int depth)
+color ray_color(const Ray &r, const IHitable &world, int depth)
 {
-    hit_record rec;
+    HitRecord rec;
 
     // If we've exceeded the ray bounce limit, no more light is gathered.
     if (depth <= 0)
@@ -53,9 +53,9 @@ int main()
     const int max_depth = 50;
     // World
 
-    hittable_list world;
-    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
-    world.add(make_shared<sphere>(point3(0, -100.5, -1), 100));
+    HittableList world;
+    world.add(make_shared<Sphere>(point3(0, 0, -1), 0.5));
+    world.add(make_shared<Sphere>(point3(0, -100.5, -1), 100));
 
     // Camera
     // camera cam;
@@ -65,7 +65,7 @@ int main()
     auto dist_to_focus = 10.0;
     auto aperture = 0.1;
 
-    camera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus);
+    Carmera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus);
 
     // Render
 

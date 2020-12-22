@@ -10,16 +10,25 @@
 #include "Render.h"
 #include "Vector3d.h"
 
-struct hit_record
+/**
+ * hitable object record
+ */
+struct HitRecord
 {
-    point3 p;
-    Vector3d normal;
-    shared_ptr<material> mat_ptr;
-    double t;
-    double u;
-    double v;
-    bool front_face;
+    point3 p;                      //<
+    Vector3d normal;               //<
+    shared_ptr<IMaterial> mat_ptr; //<
+    double t;                      //<
+    double u;                      //<
+    double v;                      //<
+    bool front_face;               //<
 
+    /**
+     * Set the face normal object
+     *
+     * @param r
+     * @param outward_normal
+     */
     inline void set_face_normal(const Ray &r, const Vector3d &outward_normal)
     {
         front_face = dot(r.direction(), outward_normal) < 0;

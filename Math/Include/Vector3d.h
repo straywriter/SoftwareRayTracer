@@ -1,48 +1,104 @@
 #pragma once
 
+#include "Render.h"
 #include <cmath>
 #include <iostream>
-#include "Render.h"
 
 using std::fabs;
 using std::sqrt;
 
+/**
+ * Vector three double component
+ */
 class Vector3d
 {
   public:
+    /**
+     * Construct a new Vector 3d object
+     */
     Vector3d() : e{0, 0, 0}
     {
     }
+
+    /**
+     * Construct a new Vector 3d object
+     *
+     * @param e0
+     * @param e1
+     * @param e2
+     */
     Vector3d(double e0, double e1, double e2) : e{e0, e1, e2}
     {
     }
 
+    /**
+     * return x
+     *
+     * @return double
+     */
     double x() const
     {
         return e[0];
     }
+
+    /**
+     * return y
+     *
+     * @return double
+     */
     double y() const
     {
         return e[1];
     }
+
+    /**
+     * return z
+     *
+     * @return double
+     */
     double z() const
     {
         return e[2];
     }
 
+    /**
+     *
+     *
+     * @return Vector3d
+     */
     Vector3d operator-() const
     {
         return Vector3d(-e[0], -e[1], -e[2]);
     }
+
+    /**
+     *
+     *
+     * @param i
+     * @return double
+     */
     double operator[](int i) const
     {
         return e[i];
     }
+
+    /**
+     *
+     *
+     * @param i
+     * @return double&
+     */
     double &operator[](int i)
     {
         return e[i];
     }
 
+    /**
+     *
+     *
+     * @param v
+     * @return Vector3d&
+     */
     Vector3d &operator+=(const Vector3d &v)
     {
         e[0] += v.e[0];
@@ -51,6 +107,12 @@ class Vector3d
         return *this;
     }
 
+    /**
+     *
+     *
+     * @param t
+     * @return Vector3d&
+     */
     Vector3d &operator*=(const double t)
     {
         e[0] *= t;
@@ -59,21 +121,43 @@ class Vector3d
         return *this;
     }
 
+    /**
+     *
+     *
+     * @param t
+     * @return Vector3d&
+     */
     Vector3d &operator/=(const double t)
     {
         return *this *= 1 / t;
     }
 
+    /**
+     *
+     *
+     * @return double
+     */
     double length() const
     {
         return sqrt(length_squared());
     }
 
+    /**
+     *
+     *
+     * @return double
+     */
     double length_squared() const
     {
         return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
     }
 
+    /**
+     *
+     *
+     * @return true
+     * @return false
+     */
     bool near_zero() const
     {
         // Return true if the vector is close to zero in all dimensions.
@@ -81,18 +165,30 @@ class Vector3d
         return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
     }
 
+    /**
+     *
+     *
+     * @return Vector3d
+     */
     inline static Vector3d random()
     {
         return Vector3d(random_double(), random_double(), random_double());
     }
 
+    /**
+     *
+     *
+     * @param min
+     * @param max
+     * @return Vector3d
+     */
     inline static Vector3d random(double min, double max)
     {
         return Vector3d(random_double(min, max), random_double(min, max), random_double(min, max));
     }
 
   public:
-    double e[3];
+    double e[3]; //<
 };
 
 // Type aliases for vec3
@@ -144,7 +240,7 @@ inline double dot(const Vector3d &u, const Vector3d &v)
 inline Vector3d cross(const Vector3d &u, const Vector3d &v)
 {
     return Vector3d(u.e[1] * v.e[2] - u.e[2] * v.e[1], u.e[2] * v.e[0] - u.e[0] * v.e[2],
-                u.e[0] * v.e[1] - u.e[1] * v.e[0]);
+                    u.e[0] * v.e[1] - u.e[1] * v.e[0]);
 }
 
 inline Vector3d unit_vector(Vector3d v)

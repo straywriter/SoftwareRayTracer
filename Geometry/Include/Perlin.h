@@ -4,9 +4,9 @@
 #include "Render.h"
 
 
-class perlin {
+class Perlin {
     public:
-        perlin() {
+        Perlin() {
             ranvec = new Vector3d[point_count];
             for (int i = 0; i < point_count; ++i) {
                 ranvec[i] = unit_vector(Vector3d::random(-1,1));
@@ -17,7 +17,7 @@ class perlin {
             perm_z = perlin_generate_perm();
         }
 
-        ~perlin() {
+        ~Perlin() {
             delete[] ranvec;
             delete[] perm_x;
             delete[] perm_y;

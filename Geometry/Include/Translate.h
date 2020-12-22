@@ -3,23 +3,23 @@
 #include "IHitable.h"
 
 
-class translate : public hittable {
+class Translate : public IHitable {
     public:
-        translate(shared_ptr<hittable> p, const Vector3d& displacement)
+        Translate(shared_ptr<IHitable> p, const Vector3d& displacement)
             : ptr(p), offset(displacement) {}
 
         virtual bool hit(
-            const Ray& r, double t_min, double t_max, hit_record& rec) const override;
+            const Ray& r, double t_min, double t_max, HitRecord& rec) const override;
 
         virtual bool bounding_box(double time0, double time1, AABB& output_box) const override;
 
     public:
-        shared_ptr<hittable> ptr;
+        shared_ptr<IHitable> ptr;
         Vector3d offset;
 };
 
 
-bool translate::hit(const Ray& r, double t_min, double t_max, hit_record& rec) const {
+bool Translate::hit(const Ray& r, double t_min, double t_max, HitRecord& rec) const {
     Ray moved_r(r.origin() - offset, r.direction(), r.time());
     if (!ptr->hit(moved_r, t_min, t_max, rec))
         return false;
@@ -31,7 +31,7 @@ bool translate::hit(const Ray& r, double t_min, double t_max, hit_record& rec) c
 }
 
 
-bool translate::bounding_box(double time0, double time1, AABB& output_box) const {
+bool Translate::bounding_box(double time0, double time1, AABB& output_box) const {
     if (!ptr->bounding_box(time0, time1, output_box))
         return false;
 

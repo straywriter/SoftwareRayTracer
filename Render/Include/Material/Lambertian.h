@@ -2,14 +2,14 @@
 #include "IMaterial.h"
 
 
-class lambertian : public material
+class Lambertian : public IMaterial
 {
   public:
-    lambertian(const color &a) : albedo(a)
+    Lambertian(const color &a) : albedo(a)
     {
     }
 
-    virtual bool scatter(const Ray &r_in, const hit_record &rec, color &attenuation, Ray &scattered) const override
+    virtual bool scatter(const Ray &r_in, const HitRecord &rec, color &attenuation, Ray &scattered) const override
     {
         auto scatter_direction = rec.normal + random_unit_vector();
 

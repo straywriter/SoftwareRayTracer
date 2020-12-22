@@ -3,13 +3,12 @@
 #include "IMaterial.h"
 
 
-
-class dielectric : public material {
+class Dielectric : public IMaterial {
     public:
-        dielectric(double index_of_refraction) : ir(index_of_refraction) {}
+        Dielectric(double index_of_refraction) : ir(index_of_refraction) {}
 
         virtual bool scatter(
-            const Ray& r_in, const hit_record& rec, color& attenuation, Ray& scattered
+            const Ray& r_in, const HitRecord& rec, color& attenuation, Ray& scattered
         ) const override {
             attenuation = color(1.0, 1.0, 1.0);
             double refraction_ratio = rec.front_face ? (1.0/ir) : ir;

@@ -4,3 +4,6 @@
 /out
 .vs
 CMakeSettings.json
+/Doc/html
+/Doc/latex
+/Releace

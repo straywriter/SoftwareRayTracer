@@ -2,18 +2,27 @@
 
 #include "Render.h"
 
-class camera
+/**
+ * Carmera
+ */
+class Carmera
 {
   public:
     /**
      * Construct a new camera object
      */
-    camera() : camera(point3(0, 0, -1), point3(0, 0, 0), Vector3d(0, 1, 0), 40, 1, 0, 10)
+    Carmera() : Carmera(point3(0, 0, -1), point3(0, 0, 0), Vector3d(0, 1, 0), 40, 1, 0, 10)
     {
     }
 
-    camera(double vfov, // vertical field-of-view in degrees
-           double aspect_ratio)
+    /**
+     * Construct a new Carmera object
+     *
+     * @param vfov
+     * @param aspect_ratio
+     */
+    Carmera(double vfov, // vertical field-of-view in degrees
+            double aspect_ratio)
     {
         auto theta = degrees_to_radians(vfov);
         auto h = tan(theta / 2);
@@ -28,9 +37,18 @@ class camera
         lower_left_corner = origin - horizontal / 2 - vertical / 2 - Vector3d(0, 0, focal_length);
     }
 
-    camera(point3 lookfrom, point3 lookat, Vector3d vup,
-           double vfov, // vertical field-of-view in degrees
-           double aspect_ratio)
+    /**
+     * Construct a new Carmera object
+     *
+     * @param lookfrom
+     * @param lookat
+     * @param vup
+     * @param vfov
+     * @param aspect_ratio
+     */
+    Carmera(point3 lookfrom, point3 lookat, Vector3d vup,
+            double vfov, // vertical field-of-view in degrees
+            double aspect_ratio)
     {
         auto theta = degrees_to_radians(vfov);
         auto h = tan(theta / 2);
@@ -47,9 +65,22 @@ class camera
         lower_left_corner = origin - horizontal / 2 - vertical / 2 - w;
     }
 
-    camera(point3 lookfrom, point3 lookat, Vector3d vup,
-           double vfov, // vertical field-of-view in degrees
-           double aspect_ratio, double aperture, double focus_dist, double _time0 = 0, double _time1 = 0)
+    /**
+     * Construct a new Carmera object
+     *
+     * @param lookfrom
+     * @param lookat
+     * @param vup
+     * @param vfov
+     * @param aspect_ratio
+     * @param aperture
+     * @param focus_dist
+     * @param _time0
+     * @param _time1
+     */
+    Carmera(point3 lookfrom, point3 lookat, Vector3d vup,
+            double vfov, // vertical field-of-view in degrees
+            double aspect_ratio, double aperture, double focus_dist, double _time0 = 0, double _time1 = 0)
     {
         auto theta = degrees_to_radians(vfov);
         auto h = tan(theta / 2);
@@ -70,6 +101,13 @@ class camera
         time1 = _time1;
     }
 
+    /**
+     * Get the ray object
+     *
+     * @param s
+     * @param t
+     * @return Ray
+     */
     Ray get_ray(double s, double t) const
     {
         Vector3d rd = lens_radius * random_in_unit_disk();
@@ -79,11 +117,11 @@ class camera
     }
 
   private:
-    point3 origin;
-    point3 lower_left_corner;
-    Vector3d horizontal;
-    Vector3d vertical;
-    Vector3d u, v, w;
-    double lens_radius;
-    double time0, time1; // shutter open/close times
+    point3 origin;            //<
+    point3 lower_left_corner; //<
+    Vector3d horizontal;      //<
+    Vector3d vertical;        //<
+    Vector3d u, v, w;         //<
+    double lens_radius;       //<
+    double time0, time1;      //<
 };

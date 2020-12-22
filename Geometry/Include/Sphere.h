@@ -4,24 +4,24 @@
 #include "Render.h"
 #include "AABB.h"
 
-class sphere : public hittable
+class Sphere : public IHitable
 {
   public:
-    sphere()
+    Sphere()
     {
     }
-    sphere(point3 cen, double r) : center(cen), radius(r){};
+    Sphere(point3 cen, double r) : center(cen), radius(r){};
 
-    sphere(point3 cen, double r, shared_ptr<material> m) : center(cen), radius(r), mat_ptr(m){};
+    Sphere(point3 cen, double r, shared_ptr<IMaterial> m) : center(cen), radius(r), mat_ptr(m){};
 
-    virtual bool hit(const Ray &r, double t_min, double t_max, hit_record &rec) const override;
+    virtual bool hit(const Ray &r, double t_min, double t_max, HitRecord &rec) const override;
 
     virtual bool bounding_box(double time0, double time1, AABB &output_box) const override;
 
   public:
     point3 center;
     double radius;
-    shared_ptr<material> mat_ptr;
+    shared_ptr<IMaterial> mat_ptr;
 
   private:
     static void get_sphere_uv(const point3 &p, double &u, double &v)
@@ -41,14 +41,14 @@ class sphere : public hittable
     }
 };
 
-bool sphere::bounding_box(double time0, double time1, AABB& output_box) const {
+bool Sphere::bounding_box(double time0, double time1, AABB& output_box) const {
     output_box = AABB(
         center - Vector3d(radius, radius, radius),
         center + Vector3d(radius, radius, radius));
     return true;
 }
 
-bool sphere::hit(const Ray &r, double t_min, double t_max, hit_record &rec) const
+bool Sphere::hit(const Ray &r, double t_min, double t_max, HitRecord &rec) const
 {
     Vector3d oc = r.origin() - center;
     auto a = r.direction().length_squared();

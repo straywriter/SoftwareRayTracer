@@ -2,12 +2,12 @@
 #include "IHitable.h"
 
 
-class flip_face : public hittable {
+class FlipFace : public IHitable {
     public:
-        flip_face(shared_ptr<hittable> p) : ptr(p) {}
+        FlipFace(shared_ptr<IHitable> p) : ptr(p) {}
 
         virtual bool hit(
-            const Ray& r, double t_min, double t_max, hit_record& rec) const override {
+            const Ray& r, double t_min, double t_max, HitRecord& rec) const override {
 
             if (!ptr->hit(r, t_min, t_max, rec))
                 return false;
@@ -21,16 +21,16 @@ class flip_face : public hittable {
         }
 
     public:
-        shared_ptr<hittable> ptr;
+        shared_ptr<IHitable> ptr;
 };
 
 
-class flip_face : public hittable {
+class FlipFace : public IHitable {
     public:
-        flip_face(shared_ptr<hittable> p) : ptr(p) {}
+        FlipFace(shared_ptr<IHitable> p) : ptr(p) {}
 
         virtual bool hit(
-            const Ray& r, double t_min, double t_max, hit_record& rec) const override {
+            const Ray& r, double t_min, double t_max, HitRecord& rec) const override {
 
             if (!ptr->hit(r, t_min, t_max, rec))
                 return false;
@@ -44,5 +44,5 @@ class flip_face : public hittable {
         }
 
     public:
-        shared_ptr<hittable> ptr;
+        shared_ptr<IHitable> ptr;
 };

@@ -6,13 +6,13 @@
 
 
 
-class lambertianT : public material {
+class LambertianTexture : public IMaterial {
     public:
-        lambertianT(const color& a) : albedo(make_shared<solid_color>(a)) {}
-        lambertianT(shared_ptr<texture> a) : albedo(a) {}
+        LambertianTexture(const color& a) : albedo(make_shared<SolidColor>(a)) {}
+        LambertianTexture(shared_ptr<Texture> a) : albedo(a) {}
 
         virtual bool scatter(
-            const Ray& r_in, const hit_record& rec, color& attenuation, Ray& scattered
+            const Ray& r_in, const HitRecord& rec, color& attenuation, Ray& scattered
         ) const override {
             auto scatter_direction = rec.normal + random_unit_vector();
 
@@ -26,5 +26,5 @@ class lambertianT : public material {
         }
 
     public:
-        shared_ptr<texture> albedo;
+        shared_ptr<Texture> albedo;
 };

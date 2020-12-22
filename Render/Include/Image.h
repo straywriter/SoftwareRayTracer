@@ -15,7 +15,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb/stb_image.h"
 
-// Restore warning levels.
+// restore warning levels.
 #ifdef _MSC_VER
     // Microsoft Visual C++ Compiler
     #pragma warning (pop)

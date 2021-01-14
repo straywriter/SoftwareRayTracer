@@ -2,15 +2,16 @@
 #include "Vector3d.h"
 
 /**
- * 
- * 
+ *
+ *
  */
 class Ray
 {
-     public:
+  public:
     point3 orig;
     Vector3d dir;
     double tm;
+
   public:
     Ray()
     {
@@ -40,6 +41,4 @@ class Ray
     {
         return orig + t * dir;
     }
-
- 
 };
